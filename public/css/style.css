@@ -1,0 +1,260 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('../images/Background1.png') no-repeat center center fixed;
+    margin: 0;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #cfc5b5;
+    padding: 60px 40px;  
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    width: 800px;;
+    max-width: 400px;
+    min-width: 300px;
+    margin-bottom: 5px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.hero-text p {
+    color: #475569;
+    font-size: 24px;
+    margin: 0 0 12px 0;
+    padding: 30px 10px;
+    
+}
+
+.btn-hero {
+    background: #d97706;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+.btn-hero:hover {
+    background: #893d03;
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* CARD */
+.pet-card {
+    background: #cfc5b5;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.pet-content {
+    display: flex;
+    gap: 25px;
+}
+
+.pet-image img {
+    width: 180px;
+    border-radius: 15px;
+}
+
+.pet-info h3 {
+    margin-top: 0;
+}
+
+.pet-info p {
+    margin: 6px 0;
+}
+
+/* STATUS BADGE */
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-sehat {
+    background: #bbf7d0;
+    color: #166534;
+}
+
+.status-sakit {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+/* SUCCESS ALERT */
+.success-alert {
+    background: #dcfce7;
+    color: #166534;
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* CREATE.BLADE.PHP */
+.form-card {
+    background: #cfc5b5;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.btn-submit {
+    background: #d97706;
+    color: white;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: #893d03;
+}
+
+/* DASHBOARD */
+.dashboard-stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    flex: 1;
+    background: #cfc5b5;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.stat-card h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #475569;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* BUTTONS */
+.pet-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+/* Base button */
+.btn {
+    padding: 9px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Tambah Kunjungan */
+.btn-visit {
+    background: #08913a;
+    color: white;
+}
+
+.btn-visit:hover {
+    background: #025a22;
+}
+
+/* Edit */
+.btn-edit {
+    background: #1a62d5;
+    color: white;
+}
+
+.btn-edit:hover {
+    background: #04339a;
+}
+
+/* Hapus */
+.btn-delete {
+    background: #e32f2f;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #880202;
+}
