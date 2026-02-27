@@ -96,4 +96,39 @@ class PetController extends Controller
         return redirect()->route('pets.index')
             ->with('success', 'Data pasien berhasil dihapus.');
     }
+
+    public function apiIndex()
+{
+    return response()->json(Pet::all(), 200);
+}
+
+public function apiStore(Request $request)
+{
+    $validated = $request->validate([
+        'pet_name'   => 'required',
+        'owner_name' => 'required',
+        'species_id' => 'required',
+        'breed_id'   => 'required',
+        'age_value'  => 'required',
+        'age_unit'   => 'required',
+        'gender'     => 'required'
+    ]);
+
+    $pet = Pet::create($validated);
+
+    return response()->json($pet, 201);
+}
+
+public function apiUpdate(Request $request, $id)
+{
+    $pet = Pet::findOrFail($id);
+    $pet->update($request->all());
+    return response()->json($pet, 200);
+}
+
+public function apiDelete($id)
+{
+    Pet::destroy($id);
+    return response()->json(['message' => 'Deleted'], 200);
+}
 }

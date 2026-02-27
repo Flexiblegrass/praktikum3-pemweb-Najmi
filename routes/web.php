@@ -13,9 +13,14 @@ Route::get('/get-breeds/{species}', function ($speciesId) {
     return Breed::where('species_id', $speciesId)->get();
 });
 
-// Route Tambah Kunjungan
 Route::get('/pets/{pet}/visit/create', [VisitController::class, 'create'])
     ->name('visits.create');
 
-Route::post('/pets/{pet}/visit', [VisitController::class, 'store'])
-    ->name('visits.store');
+Route::prefix('api')
+    ->withoutMiddleware([\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class])
+    ->group(function () {
+        Route::get('/pets', [PetController::class, 'apiIndex']);
+        Route::post('/pets', [PetController::class, 'apiStore']);
+        Route::put('/pets/{id}', [PetController::class, 'apiUpdate']);
+        Route::delete('/pets/{id}', [PetController::class, 'apiDelete']);
+    });
